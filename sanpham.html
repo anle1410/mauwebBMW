@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#414655",
+                      "on-primary": "#002d6d",
+                      "surface": "#131313",
+                      "secondary-container": "#474747",
+                      "primary": "#afc6ff",
+                      "inverse-primary": "#0058c9",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-surface": "#e5e2e1",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#474747",
+                      "inverse-on-surface": "#313030",
+                      "tertiary": "#e1b6ff",
+                      "primary-container": "#548dff",
+                      "on-secondary-container": "#b5b5b5",
+                      "on-primary-fixed": "#001944",
+                      "tertiary-container": "#bd69ff",
+                      "error": "#ffb4ab",
+                      "outline": "#8c90a1",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "on-background": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#6c00ae",
+                      "on-tertiary-container": "#42006d",
+                      "surface-bright": "#3a3939",
+                      "primary-fixed": "#d9e2ff",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-surface-variant": "#c1c6d8",
+                      "on-tertiary": "#4c007c",
+                      "surface-tint": "#afc6ff",
+                      "surface-dim": "#131313",
+                      "tertiary-fixed-dim": "#e1b6ff",
+                      "surface-container": "#201f1f",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#afc6ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#353534",
+                      "surface-container-high": "#2a2a2a",
+                      "secondary": "#c6c6c6",
+                      "on-primary-fixed-variant": "#00429a",
+                      "tertiary-fixed": "#f2daff",
+                      "on-tertiary-fixed": "#2e004e",
+                      "background": "#131313",
+                      "on-secondary": "#303030",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#353534",
+                      "on-primary-container": "#002760"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .neon-glow-primary { text-shadow: 0 0 10px rgba(175, 198, 255, 0.5); }
+        .neon-glow-tertiary { text-shadow: 0 0 10px rgba(225, 182, 255, 0.5); }
+        .neon-border-hover:hover { box-shadow: 0 0 20px rgba(84, 141, 255, 0.2); }
+        .asymmetric-shape { border-radius: 0.75rem 4rem 0.75rem 4rem; }
+    </style>
+</head>
+<body class="bg-surface overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-[100] bg-gradient-to-b from-[#131313] to-transparent">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1920px] mx-auto bg-[#131313]/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(84,141,255,0.08)]">
+<a href="trangchu.html" class="text-2xl font-black text-[#afc6ff] tracking-tighter cursor-pointer active:scale-95 transition-transform font-['Space_Grotesk'] block">
+                Moros BMW
+            </a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#afc6ff] border-b-2 border-[#afc6ff] pb-1 font-['Space_Grotesk'] tracking-tight font-bold text-sm uppercase transition-all duration-300" href="#">Bộ Sưu Tập</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Space_Grotesk'] tracking-tight font-bold text-sm uppercase" href="#">Công Nghệ</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Space_Grotesk'] tracking-tight font-bold text-sm uppercase" href="#">Dịch Vụ</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300 font-['Space_Grotesk'] tracking-tight font-bold text-sm uppercase" href="#">Ưu Đãi</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-[#afc6ff]">
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/5 p-2 rounded-full transition-all duration-300" data-icon="language">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-white/5 p-2 rounded-full transition-all duration-300" data-icon="person">person</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-2.5 px-6 rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 text-sm uppercase tracking-tight">
+                    Đăng Ký Lái Thử
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto">
+<!-- Hero Section Title -->
+<div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-tertiary font-headline font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Hiệu năng thuần khiết</span>
+<h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter leading-none text-on-surface">
+                    Dòng xe BMW <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">nổi bật</span>
+</h1>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-2 glass-panel bg-surface-container-low p-2 rounded-2xl border border-white/5">
+<button class="px-6 py-2 rounded-xl text-sm font-bold bg-primary text-on-primary-fixed transition-all duration-300">Tất cả</button>
+<button class="px-6 py-2 rounded-xl text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-all duration-300">Sedan</button>
+<button class="px-6 py-2 rounded-xl text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-all duration-300">SUV</button>
+<button class="px-6 py-2 rounded-xl text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-all duration-300">M Series</button>
+<button class="px-6 py-2 rounded-xl text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-all duration-300">Xe điện</button>
+</div>
+</div>
+<!-- Car Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1: BMW M4 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 neon-border-hover border border-white/5">
+<div class="relative h-[240px] overflow-hidden bg-[#000]">
+<img alt="BMW M4 Competition" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern BMW M4 Competition in frozen black finish parked in a neon-lit futuristic garage with electric blue and purple accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2nFDpFVyvKNLwwvBMEl0yOLFjwJpvE_KSXLoAlVZQ1xHOcR0cD3YHeTWI5bwm7WFTdlbxC8HarBb9mPVi8UoJ7WYr8n5MmB3wRlPEZydOdmd1WDhDazl1P3qQS882RDB0yjIm6LNcN4aGEwg71V7BQOq94HjWHGupEhNzpzrjvZMFowAchpBM_y8yMaKyGHcwKJUJhCiBeqCPgMRSEerXcL3ro7jcrEWLw9YBrNxTVTFqm6mW4aWRG019OSjb5tygw4RlwZ0jcQ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+<span class="absolute top-4 right-4 bg-tertiary-container/90 text-on-tertiary-container text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider glass-panel">Performance</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">BMW M4 Competition</h3>
+<div class="flex text-tertiary gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-light mb-4 line-clamp-2">Đỉnh cao của sự phấn khích với động cơ M TwinPower Turbo 510 mã lực.</p>
+<div class="mt-auto">
+<div class="text-xl font-headline font-bold text-primary mb-6">4.599.000.000 VNĐ</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-xl hover:shadow-[0_0_20px_rgba(84,141,255,0.4)] transition-all duration-300 text-xs uppercase">Mua ngay</button>
+<button class="border border-outline-variant/30 text-on-surface hover:bg-white/5 py-3 rounded-xl transition-all duration-300 text-xs uppercase">Chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: BMW i4 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 neon-border-hover border border-white/5">
+<div class="relative h-[240px] overflow-hidden bg-[#000]">
+<img alt="BMW i4 Electric" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Metallic silver BMW i4 Gran Coupe electric vehicle moving through a tech-inspired urban tunnel with blue fiber optic lighting trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVo0veGM9wrO0VIxTjYGJ21HrH1G_gCc-LXCrulUSxm-gufgVQfwXEwiLVmMnARTDGkeZ4eK9LhoWxt-QfUvkTuECVziHkwq5R7DZ-XegCr8fLT0GtEsBFktsuOux__bX7AVfdPGeC37Qts-3-1o_eTz8hwxi_k9kxnZCG3pIrmOX61Mdn19qYf8G6swKPoTkQY4Q9WVCUBL6X-DCcLn8XiWgbOuBfEpycfjc33qESV6oMM3OAhfrf-SRqH_ujpL_BuGYEPeYM92o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+<span class="absolute top-4 right-4 bg-primary/90 text-on-primary text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider glass-panel">Electric</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">BMW i4 eDrive40</h3>
+<div class="flex text-tertiary gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-light mb-4 line-clamp-2">Kỷ nguyên thuần điện mới với phạm vi hoạt động lên đến 590km.</p>
+<div class="mt-auto">
+<div class="text-xl font-headline font-bold text-primary mb-6">3.759.000.000 VNĐ</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-xl hover:shadow-[0_0_20px_rgba(84,141,255,0.4)] transition-all duration-300 text-xs uppercase">Mua ngay</button>
+<button class="border border-outline-variant/30 text-on-surface hover:bg-white/5 py-3 rounded-xl transition-all duration-300 text-xs uppercase">Chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: BMW X5 -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 neon-border-hover border border-white/5">
+<div class="relative h-[240px] overflow-hidden bg-[#000]">
+<img alt="BMW X5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sophisticated dark blue BMW X5 SUV parked on a rainy city street at night with glowing amber street lights reflecting off the wet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm3maiYPgA7IqtodVPnoO305ltrxCQtX4oJzmhshv2L_jwNcvO4zNP9C7f9iF8gZrNmCKfzhL_I31Dy1jmdmZwP3S5lIXPr_X_CbIRTyKOjQCojmbGEVeaU0_7FDKRkCfP15po4qgEgf1WEoNc_PPa0r_6Fw5EFSO4bD87qHJZWFD1ch5QBlGF8mhakw89vIWKsh8dzhCG4KHyETbgE_hyS_VL0y2RiTcL0G1IwjBxqHc8ggZeAxGp6m0GkZYNMIj3lnSDF-_Wsu8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+<span class="absolute top-4 right-4 bg-secondary-container/90 text-on-surface text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider glass-panel">SUV</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">BMW X5 xDrive40i</h3>
+<div class="flex text-tertiary gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-light mb-4 line-clamp-2">Sự kết hợp hoàn hảo giữa sang trọng và khả năng vận hành linh hoạt.</p>
+<div class="mt-auto">
+<div class="text-xl font-headline font-bold text-primary mb-6">4.169.000.000 VNĐ</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-xl hover:shadow-[0_0_20px_rgba(84,141,255,0.4)] transition-all duration-300 text-xs uppercase">Mua ngay</button>
+<button class="border border-outline-variant/30 text-on-surface hover:bg-white/5 py-3 rounded-xl transition-all duration-300 text-xs uppercase">Chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: BMW 7 Series -->
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 neon-border-hover border border-white/5">
+<div class="relative h-[240px] overflow-hidden bg-[#000]">
+<img alt="BMW 7 Series" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Luxury BMW 7 Series sedan in deep obsidian black with glowing crystal headlights in a high-contrast cinematic dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBReTw34-5-FIi28qwjbkqv2-jLPlZL95VAa92TVy-8U0cFUqTR7MYIk6zmJc3_9p1N8DHPAaGhkR6WaYcfVF3_ZRwbKU5nv1MEexa13O2ct_037GnXXHn-I1LGYzj5kjWWglcXoJbjKDwkO3yEqGyc49-Lz9O1HBBCsbHc-mzgqbF0OvSQtmOy9Sml8ifT9oZc3serqhBjt22yV_WYDzQWOQCh7w6T1r8DruBS8O4lxo51TYi2cYuRsWlDdWlpvsGOmIeuI_7FGG0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+<span class="absolute top-4 right-4 bg-tertiary/20 text-tertiary text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider glass-panel border border-tertiary/30">Luxury</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">BMW 735i M Sport</h3>
+<div class="flex text-tertiary gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-light mb-4 line-clamp-2">Định nghĩa lại sự sang trọng với màn hình BMW Theater Screen 31.3 inch.</p>
+<div class="mt-auto">
+<div class="text-xl font-headline font-bold text-primary mb-6">5.199.000.000 VNĐ</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold py-3 rounded-xl hover:shadow-[0_0_20px_rgba(84,141,255,0.4)] transition-all duration-300 text-xs uppercase">Mua ngay</button>
+<button class="border border-outline-variant/30 text-on-surface hover:bg-white/5 py-3 rounded-xl transition-all duration-300 text-xs uppercase">Chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cinematic Feature Banner -->
+<div class="mt-24 relative overflow-hidden rounded-[2rem] h-[500px] flex items-center px-12 group border border-white/5">
+<div class="absolute inset-0 z-0">
+<img alt="Technology Background" class="w-full h-full object-cover opacity-40 transition-transform duration-1000 group-hover:scale-105" data-alt="Interior of a luxury BMW vehicle showing the curved digital display dashboard with high-tech neon UI interfaces and ambient purple lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWi5qE_-L7maN0WMyqCRx9XuTufYzUgnLGRjKm3SNCo9MW2hazsLaDHaMsJFiCMls9iPKP_H1K0hnTK2S9cfpY-THQUaBxxq-JtuxgjXuh__e0TG7-KjM8fi8RXhR2t71U9Ijn2ROJvxQ1u2HDc5DCqmzFym3gY-2c1Dxdg6osbI1YGm9IrT_fjLoGnKp3KcJ4KzJJRphHCE0uoOCfBlvP7yXYhwlmDsmZ9iujH3V2-46C5JV7BeNIBuYiYrUVjjp8ByHWPehxlFs"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-xl">
+<span class="text-primary font-headline font-bold tracking-widest text-sm mb-4 block">FUTURE VISION</span>
+<h2 class="text-5xl font-headline font-black tracking-tight text-on-surface mb-6 uppercase italic">Trải nghiệm tương lai số</h2>
+<p class="text-on-surface-variant text-lg mb-8 font-light">Hệ thống BMW iDrive 8.5 mới nhất mang đến khả năng tương tác trực quan chưa từng có.</p>
+<button class="bg-white/10 backdrop-blur-xl border border-white/20 text-on-surface font-bold py-4 px-10 rounded-xl hover:bg-white/20 transition-all duration-300 uppercase tracking-widest text-sm">Khám phá công nghệ</button>
+</div>
+</div>
+</main>
+<!-- Floating Spec Bar (Signature Component) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 glass-panel bg-surface-container/80 border border-white/10 rounded-full px-8 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-12 max-md:hidden">
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">0-100 km/h</span>
+<span class="text-primary font-headline font-bold text-xl">3.9s</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">CÔNG SUẤT</span>
+<span class="text-primary font-headline font-bold text-xl">510 HP</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">MÔ-MEN XOẮN</span>
+<span class="text-primary font-headline font-bold text-xl">650 Nm</span>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-[#0e0e0e]">
+<div class="flex flex-col items-center gap-6 px-10">
+<div class="text-xl font-bold text-white font-['Space_Grotesk'] tracking-tighter">Moros Showroom</div>
+<div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-widest text-gray-500 font-['Manrope']">
+<a class="hover:text-[#bd69ff] transition-colors duration-300" href="#">Chính Sách Bảo Mật</a>
+<a class="hover:text-[#bd69ff] transition-colors duration-300" href="#">Điều Khoản Sử Dụng</a>
+<a class="hover:text-[#bd69ff] transition-colors duration-300" href="#">Liên Hệ</a>
+<a class="hover:text-[#bd69ff] transition-colors duration-300" href="#">Showroom</a>
+</div>
+<p class="text-xs uppercase tracking-widest text-gray-500 font-['Manrope'] opacity-80">© 2024 Moros Showroom. Đẳng Cấp Xe Sang.</p>
+</div>
+</footer>
+</body></html>

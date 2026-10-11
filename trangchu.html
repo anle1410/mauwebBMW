@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moros | Chinh Phục Bóng Đêm</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#002760",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "primary-fixed-dim": "#afc6ff",
+                      "on-secondary": "#303030",
+                      "surface-container-highest": "#353534",
+                      "primary-fixed": "#d9e2ff",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-container": "#b5b5b5",
+                      "tertiary-fixed-dim": "#e1b6ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "secondary-fixed": "#e2e2e2",
+                      "inverse-primary": "#0058c9",
+                      "on-tertiary": "#4c007c",
+                      "tertiary-fixed": "#f2daff",
+                      "on-error": "#690005",
+                      "surface-container": "#201f1f",
+                      "on-surface-variant": "#c1c6d8",
+                      "secondary-container": "#474747",
+                      "surface-container-high": "#2a2a2a",
+                      "on-tertiary-fixed": "#2e004e",
+                      "tertiary": "#e1b6ff",
+                      "surface-bright": "#3a3939",
+                      "primary": "#afc6ff",
+                      "outline-variant": "#414655",
+                      "primary-container": "#548dff",
+                      "surface": "#131313",
+                      "on-tertiary-container": "#42006d",
+                      "on-background": "#e5e2e1",
+                      "surface-dim": "#131313",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary": "#c6c6c6",
+                      "surface-variant": "#353534",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#474747",
+                      "outline": "#8c90a1",
+                      "on-primary-fixed-variant": "#00429a",
+                      "tertiary-container": "#bd69ff",
+                      "on-tertiary-fixed-variant": "#6c00ae",
+                      "on-primary": "#002d6d",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "on-primary-fixed": "#001944",
+                      "surface-tint": "#afc6ff",
+                      "inverse-on-surface": "#313030",
+                      "inverse-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(175, 198, 255, 0.3);
+        }
+        .text-glow-tertiary {
+            text-shadow: 0 0 8px rgba(225, 182, 255, 0.6);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-2xl bg-gradient-to-b from-zinc-900/20 to-transparent shadow-[0_20px_50px_rgba(175,198,255,0.05)]">
+<nav class="flex justify-between items-center w-full px-12 py-8 mx-auto">
+<div class="text-3xl font-black tracking-tighter text-blue-200">Moros</div>
+<ul class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+<li class="text-blue-200 border-b-2 border-blue-400/50 pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer">Trang chủ</li>
+<li class="text-zinc-400 font-medium pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer"><a href="sanpham.html">Menu</a></li>
+<li class="text-zinc-400 font-medium pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer">Dòng xe</li>
+<li class="text-zinc-400 font-medium pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer">Chi tiết xe</li>
+<li class="text-zinc-400 font-medium pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer">Bộ phận</li>
+<li class="text-zinc-400 font-medium pb-2 hover:text-purple-300 hover:drop-shadow-[0_0_8px_rgba(225,182,255,0.6)] transition-all duration-300 active:scale-95 cursor-pointer">Liên hệ</li>
+</ul>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 text-blue-200">
+<span class="material-symbols-outlined hover:text-purple-300 transition-all cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined hover:text-purple-300 transition-all cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-bold tracking-tight active:scale-95 transition-transform neon-glow-primary">
+                    Đặt lịch ngay
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="BMW M4 Nocturnal" class="w-full h-full object-cover grayscale brightness-[0.4] contrast-125" data-alt="Modern high-performance BMW M4 under dramatic blue and purple neon lights on a glossy asphalt city street at night with skyscrapers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtD1BWd2UHwSCVckM8Y9WF9lSR_OcNGZFmetOyXPjiiUWZuzk7fpn7EuOi1-KIhKslgahTmVUJaORBf1eFL9gsuz1TbvVF4Co0-OiL5H3V3XX7rxwx-yca5EUnhp3Y1kVsDHA9dxetaIpCv73Ifoh_sr-A2kze5Mu66mvhn5AXiR_HV4YuCiRgsOAQnnk1SZFcFoI5Vc9wgIsNDMgV9tIlmMHPOroRpnjmvQVQ8rq4jtBmr16wXksxYEfd0xhYTx2yo5fSNRSbE-Y"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+<div class="relative z-10 px-12 w-full">
+<div class="max-w-4xl space-y-6">
+<p class="font-label text-primary tracking-[0.4em] uppercase text-sm font-semibold opacity-80">BMW M-Series Excellence</p>
+<h1 class="text-8xl md:text-9xl font-black tracking-tighter leading-[0.8] text-on-surface">
+                        CHINH PHỤC<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">BÓNG ĐÊM</span>
+</h1>
+<div class="flex gap-4 pt-8">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all neon-glow-primary">
+                            Đặt xe ngay
+                        </button>
+<button class="glass-panel text-on-surface border border-outline-variant/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-highest/40 transition-all">
+                            Xem dòng xe
+                        </button>
+</div>
+</div>
+</div>
+<!-- Cinematic Spec-Bar -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 glass-panel px-12 py-6 rounded-full flex gap-16 items-center border border-white/5 shadow-2xl">
+<div class="flex flex-col items-center">
+<span class="text-primary text-2xl font-bold font-headline">3.8s</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">0-100 KM/H</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-primary text-2xl font-bold font-headline">510 HP</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Power Output</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-primary text-2xl font-bold font-headline">290 KM/H</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Max Speed</span>
+</div>
+</div>
+</section>
+<!-- Intro Section: High-Tech Luxury -->
+<section class="py-32 px-12 bg-surface">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/10 rounded-[2rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<img alt="BMW Luxury Interior" class="relative rounded-[2rem] border border-outline-variant/20 shadow-2xl" data-alt="Interior of a luxury BMW cabin with ambient purple lighting high-tech digital displays and premium carbon fiber details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv2asH7dickrAdhl97Uq10xs3bfEK_aE-0CWBtd03XUffBMMjPLArb22yy3cpDBOL-0EU7GUhALs4JloSjDeNara_Mm1NBbceVZYDEmGjAdkhY0VOFU-HB_r_EKfNiUgBjd83g3wPPtw5c4sFpRC7DNU7DtMQvshALGyljJttVIuA6ySpBDEWOPGTdT0kHl8Hl-q2wA7q9APDY1ywcAAGiS-TmD630vm3sA0M1O4j5MhNHfEyeqYz8zzFYxGT26y9qMdVEqPjkjYE"/>
+</div>
+<div class="space-y-8">
+<h2 class="text-5xl font-bold tracking-tight text-on-surface leading-tight">Trải nghiệm sang trọng,<br/> thư giãn và <span class="text-tertiary">công nghệ đỉnh cao.</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                        Tại Moros, chúng tôi không chỉ bán xe. Chúng tôi kiến tạo một hệ sinh thái chuyển động nơi trí tuệ nhân tạo và sự sang trọng thủ công hòa quyện, mang đến cảm giác lái thuần khiết ngay cả trong bóng tối.
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div class="space-y-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-bold text-lg">Digital Atelier</h3>
+<p class="text-sm text-on-surface-variant">Cá nhân hóa mọi chi tiết của riêng bạn.</p>
+</div>
+<div class="space-y-2">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bolt">bolt</span>
+<h3 class="font-bold text-lg">Electric Future</h3>
+<p class="text-sm text-on-surface-variant">Hiệu suất xanh không giới hạn.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Vehicle Selection -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-bold tracking-tighter">KHÁM PHÁ DANH MỤC</h2>
+<p class="text-on-surface-variant mt-2">Dẫn đầu kỷ nguyên di chuyển tương lai.</p>
+</div>
+<button class="text-tertiary font-bold text-glow-tertiary flex items-center gap-2">
+                    Tất cả dòng xe <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px]">
+<!-- Series - Large Card -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden glass-panel border border-outline-variant/20 group">
+<img alt="BMW Series" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Side profile of a dark grey BMW sedan in a minimalist studio with subtle blue reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBVL7LPWNYQe_MoCI0fNo4EXTUsRssnSrdCDSF2uHufr9u55SuKDvlKIxkRMb3aI8rOL5Pp7omapT_KGr1nplhlx41oJsINqb1kdUM_NwyKiLDmh6ind5bvy8d_a5gEwsqk6HbOnRxLK-gei-QS3rP6HoVKG8I0zqsReanM0hpoOhsTQGXFnYJ3fdNnD_wtm67JiZdm5j5guLas4ANcUBxL6xG0HjkS41Uzdtt4tOOeV4-ByKQz1X5OuQm88WCmgzI2wgSrfvyUB0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-3xl font-bold mb-2">Series</h3>
+<p class="text-on-surface-variant text-sm">Biểu tượng của sự sang trọng cổ điển.</p>
+</div>
+</div>
+<!-- Electric - Wide Card -->
+<div class="md:col-span-2 relative rounded-3xl overflow-hidden glass-panel border border-outline-variant/20 group">
+<img alt="BMW Electric" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern BMW electric SUV charging at night with glowing blue light rings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqS8FOmF1TmBtpXd4wLjDIClDLF4RurR9ej0U4sonne1fVczKyKrZhR4_1At3aSlpqzJAO7NpDRuI9-mRzDufzUUyKbfibNQ_9NYW3pNREBXBF-AfNfTJTIocQ7XWw9BX0bNhwhwHA-vEdHfmlCeKCQcIW3Iq_CNXm4E_VWNKuLX54Jbg8ePCmTlcjbnp9S6c6V1SSL5IXXvRvKM7lmyqyuJiBL2u3wBNfVpA9C8OJKzo_Khu8poUUfwJaBGa8TE31t3xHHO5YNKI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-3xl font-bold mb-2">Electric</h3>
+<p class="text-on-surface-variant text-sm">Kỷ nguyên thuần điện bứt phá.</p>
+</div>
+</div>
+<!-- X Series -->
+<div class="relative rounded-3xl overflow-hidden glass-panel border border-outline-variant/20 group">
+<img alt="BMW X" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Front view of BMW X5 SUV on a wet road at sunset reflecting orange and blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIbkXCPWrBHvNgeiek7uySg_eOrvXX4Sutl4IYpRiEBtn42fL46mYlBuADJkVfP7VcRJdEwZK439_viO7kEauo4IFpL3CXFaiGkwCqbQNtIiZy0zKAdsaFkTLP7It5yxufYFDRvkO4bjuTg7rIAWNvfuRpfnYBqQD7Vmetc5WKBvMJ_TX0ukuuzGsL08mNMsJKsCImKlCMA3hmAGzpg3EbbSfqXGikAvgEL4wo2ElNUc24-paDQAvALDR5Cht6qNO1kC2sp_6af1I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="text-xl font-bold">X Series</h3>
+</div>
+</div>
+<!-- M Series -->
+<div class="relative rounded-3xl overflow-hidden glass-panel border border-outline-variant/20 group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-tertiary/20 mix-blend-overlay z-10"></div>
+<img alt="BMW M" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of BMW M engine badge on a black car under vibrant neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuXqLRvASQ5pn_y2_bnrbr0vkYJeaOzZzmJ-laqvJ_FKmffOa9E1RyK6YYFcQJMdtxcVmBH2_1xhRyjekCL1LSdJ8jCsFtysOU_wel_WqJXLThxDkWuB0cPqBfxKv1rZtLpJYVK6l2DZNHQcKQtxy39FmtZrsRGJWLqR709ztW-cvdCRHPt_xhx2MjmAIC8buauRKsxoOyqtgbFLpXXOtGvgqZRX5YcmInPfs02OM3at6LzPVKMD0XOO6dQvYNxWksfSzVYNzcmnY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-20">
+<h3 class="text-xl font-bold">M Performance</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact Split -->
+<section class="py-32 px-12">
+<div class="bg-surface-container-high rounded-[3rem] p-16 flex flex-col md:flex-row justify-between items-center gap-12 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[100px] -mr-48 -mt-48"></div>
+<div class="relative z-10 space-y-4">
+<h2 class="text-4xl font-bold tracking-tight">Trải nghiệm lái thử</h2>
+<p class="text-on-surface-variant text-lg">Cảm nhận sức mạnh BMW ngay tại showroom Moros.</p>
+<div class="flex gap-4 pt-4">
+<input class="bg-surface-container-lowest border-none rounded-xl px-6 py-4 w-72 focus:ring-2 focus:ring-primary/50 transition-all text-on-surface" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-on-primary-container px-8 py-4 rounded-xl font-bold hover:brightness-110 transition-all">Gửi yêu cầu</button>
+</div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-4">
+<div class="p-6 glass-panel rounded-2xl border border-white/5 space-y-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="location_on">location_on</span>
+<p class="font-bold">Hà Nội</p>
+<p class="text-xs text-on-surface-variant">Vinhomes Ocean Park, Gia Lâm</p>
+</div>
+<div class="p-6 glass-panel rounded-2xl border border-white/5 space-y-2">
+<span class="material-symbols-outlined text-primary" data-icon="phone_in_talk">phone_in_talk</span>
+<p class="font-bold">Hotline</p>
+<p class="text-xs text-on-surface-variant">1900 88 88 88</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-16 px-12 border-t border-zinc-800/30">
+<div class="flex flex-col md:flex-row justify-between items-start w-full gap-16 mb-16">
+<div class="space-y-6">
+<div class="text-xl font-bold text-zinc-100">MOROS</div>
+<p class="text-zinc-500 max-w-sm text-sm">Nâng tầm trải nghiệm lái xe với công nghệ tương lai và dịch vụ hạng sang tại Việt Nam.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 font-['Manrope'] text-xs tracking-wider uppercase">
+<div class="space-y-4">
+<h4 class="text-zinc-100 font-bold">Sản phẩm</h4>
+<ul class="space-y-2">
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Dòng Series</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Dòng X</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Dòng M</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-zinc-100 font-bold">Khám phá</h4>
+<ul class="space-y-2">
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Công nghệ BMW</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Di động điện</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Tạp chí Moros</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-zinc-100 font-bold">Hỗ trợ</h4>
+<ul class="space-y-2">
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Bảo hành</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Dịch vụ sửa chữa</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Phụ tùng chính hãng</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-zinc-100 font-bold">Về Moros</h4>
+<ul class="space-y-2">
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Showroom</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Liên hệ</li>
+<li class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer">Nghề nghiệp</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-8 border-t border-zinc-900 pt-8">
+<div class="text-zinc-500 font-['Manrope'] text-xs tracking-wider uppercase">© 2024 MOROS AUTOMOTIVE. THIẾT KẾ CHO NHỮNG CHUYẾN ĐI ĐÊM.</div>
+<div class="flex gap-8">
+<span class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer text-xs tracking-wider uppercase">Chính sách bảo mật</span>
+<span class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer text-xs tracking-wider uppercase">Điều khoản pháp lý</span>
+<span class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer text-xs tracking-wider uppercase">Phát triển bền vững</span>
+<span class="text-zinc-500 hover:text-zinc-100 transition-colors cursor-pointer text-xs tracking-wider uppercase">Báo chí</span>
+</div>
+</div>
+</footer>
+</body></html>
